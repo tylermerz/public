@@ -15,6 +15,9 @@ require('packer').startup(function()
   use 'lewis6991/gitsigns.nvim'
   use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
   use "mickael-menu/zk-nvim"
+  use "ggandor/leap.nvim"
+  use 'numToStr/Comment.nvim'
+  
 end)
 
 local options = { noremap = true }
@@ -226,3 +229,5 @@ require("bufferline").setup{}
 require("zk").setup({
   picker = "telescope"
 })
+require('leap').add_default_mappings()
+require('Comment').setup()
